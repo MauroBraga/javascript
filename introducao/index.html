@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>Curso JavaScript</title>
+        
+    </head>
+    <body>
+
+        <script>
+            //javascript
+
+            //1 Exercício
+            console.log('1 Exercício')
+            console.log('-----------------------------------------')
+            var endereco = {
+                rua: "Rua dos pinheiros",
+                numero: 1293,
+                bairro: "Centro",
+                cidade: "São Paulo",
+                uf: "SP"
+                };
+           
+            function imprimir(e){
+                return `O usuário mora em ${e.cidade} / ${e.uf}, no bairro ${e.bairro}, na rua "${e.rua}" com nº ${e.numero}.`;
+            }
+
+            console.log(imprimir(endereco))    
+
+            //2 Exercício
+            console.log('2 Exercício')
+            console.log('-----------------------------------------')
+            function pares(x, y) {
+                for(var i = x; i <= y; i++){
+
+                    if(i%2===0){
+                        console.log(i);
+                    }
+                }
+            }
+            pares(32, 50);
+
+            
+            console.log('3 Exercício')
+            console.log('-----------------------------------------')
+            function temHabilidade(skills) {
+               var b = false;
+               
+               skills.forEach(e => {
+                   if(e ==='Javascript'){
+                      b= true; 
+                   }
+               });
+
+               return b;
+            }
+            var skills = ["Javascript", "ReactJS", "React Native"];
+            console.log(temHabilidade(skills)); // true ou false
+
+            console.log('4 Exercício')
+            console.log('-----------------------------------------')
+            
+            function experiencia(anos) {
+                if( anos>=0 && anos <=1){
+                    console.log('Iniciante')
+                }else if(anos>1 && anos <=3){
+                    console.log('Intermediário')
+                }else if(anos>3 && anos <=6){
+                    console.log('Avançado')
+                }else if(anos=>7){
+                    console.log(' Jedi Master')
+                }
+            }
+            var anosEstudo = 7;
+            experiencia(anosEstudo)
+
+            console.log('5 Exercício')
+            console.log('-----------------------------------------')    
+
+            var usuarios = [
+                {
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+                },
+                {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+                }
+            ]; 
+
+            function imprimirArray(usuarios){
+                usuarios.forEach(e => {
+                    var habilidades = e.habilidades.join()
+                   console.log(`O ${e.nome} possui as habilidades: ${habilidades}`);
+               });   
+            }   
+
+            imprimirArray(usuarios)
+
+        </script>
+    </body>
+
+</html>
